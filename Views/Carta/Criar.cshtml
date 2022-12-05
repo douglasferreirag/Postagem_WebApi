@@ -1,0 +1,70 @@
+@model Postagem.Models.Carta
+
+@{
+
+    ViewData["Title"] = "Criar novo registro de carta";
+
+}
+
+<h1>Criar novo registro de carta</h1>
+
+<br/>
+
+<div class = "row">
+
+      <div class = "row-md-4">
+
+          <form asp-action = "criar">
+
+              <div class = "form--group">
+
+                      <label asp-for = "Id" class = "control-label"></label>
+
+                       <input asp-for = "Id" class = "form-control"/>
+
+                        <br/>                  
+
+              </div>
+
+                <div class = "form--group">
+
+                      <label asp-for = "Tema" class = "control-label"></label>
+
+                       <input asp-for = "Tema" class = "form-control"/>
+
+                        <br/>
+
+                </div>
+
+
+                <div class = "form--group">
+
+                      <label asp-for = "Base" class = "control-label"></label>
+
+                       <input asp-for = "Base" class = "form-control"/>
+
+                       <br/>
+
+              </div>
+
+              
+              <div class = "form-group">
+
+                      <input type = "submit"  value = "Criar" class = "btn  btn-primary"/>
+
+              </div>
+
+              
+
+          </form>
+
+      </div>
+
+
+</div>
+
+</hr>
+<br>
+
+ 
+<a asp-action = "Index" >Voltar </a>

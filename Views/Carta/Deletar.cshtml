@@ -1,0 +1,90 @@
+@model Postagem.Models.Carta
+
+@{
+
+        ViewData["Title"] = "Deletar registro de carta";
+
+
+}
+
+<h1 style = "color: red;"> Deseja realmente deletar esse registro de carta? Essa operação é irreversível. </h1>
+
+</hr>
+
+<table class = "table">
+
+        <thead>
+
+              <tr>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Id)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Tema)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Base)
+
+                  </th>
+
+                  
+
+                  <th></th>
+
+            </tr>
+
+            
+
+        </thead>
+
+        <tbody>
+
+            
+                      <tr>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => model .Id)
+
+                         <td>
+
+                                 @Html.DisplayFor(model  => model.Tema)   
+
+                         </td>
+
+                         <td>
+
+                                @Html.DisplayFor(model  => model.Base)
+
+                         </td>
+
+                         
+                          </td>
+
+                          
+                      </tr>
+
+
+              
+
+        </tbody>
+
+</table>
+
+<form asp-action = "Deletar">
+
+    <input type = "submit" value = "Deletar" class = "btn btn-danger"/>
+
+</form>
+
+<br>
+
+<a asp-action = "Index">Voltar</a>

@@ -1,0 +1,76 @@
+@model Postagem.Models.Territorio
+
+@{
+
+    ViewData["Title"] = "Editar um registro de território";
+
+}
+
+<h1>Editar registro de território</h1>
+
+<br/>
+
+<div class = "row">
+
+      <div class = "row-md-4">
+
+          <form asp-action = "editar">
+
+              <div class = "form--group">
+
+                      <label asp-for = "Id" class = "control-label"></label>
+
+                       <input asp-for = "Id" class = "form-control"/>
+
+              </div>
+
+                <div class = "form--group">
+
+                      <label asp-for = "Descricao" class = "control-label"></label>
+
+                       <input asp-for = "Descricao" class = "form-control"/>
+
+              </div>
+
+                <div class = "form--group">
+
+                      <label asp-for = "Cidade" class = "control-label"></label>
+
+                       <input asp-for = "Cidade" class = "form-control"/>
+
+              </div>
+
+              <div>
+
+              
+                      <label asp-for = "PontoReferencia" class = "control-label"></label>
+
+                       <input asp-for = "PontoReferencia" class = "form-control"/>
+
+              </div>
+
+              <br>
+
+              <div class = "form-group">
+
+                      <input type = "submit"  value = "Editar" class = "btn  btn-primary"/>
+
+              </div>
+
+          </form>
+
+      </div>
+
+
+</div>
+
+</hr>
+<br>
+
+<div>
+
+    <a asp-action = "Index" >Voltar </a>
+
+</div>
+
+

@@ -1,0 +1,121 @@
+@model Postagem.Models.Entrega
+
+@{
+
+    ViewData["Title"] = "Criar novo registro de entrega";
+
+}
+
+<h1>Criar novo registro de entrega</h1>
+
+<br/>
+
+<div class = "row">
+
+      <div class = "row-md-4">
+
+          <form asp-action = "criar">
+
+              <div class = "form--group">
+
+                      <label asp-for = "IdCarta" class = "control-label"></label>
+
+                       <select asp-for = "IdCarta" class = "form-control">
+
+                              <option>Selecione</option>
+
+                              @foreach (var item in ViewBag.cartas)
+                             {
+
+                                      <option> @item.Id</option>
+                                      
+
+                              
+                            }
+
+                       </select>
+
+                        <br/>     
+
+              </div>
+
+                <div class = "form--group">
+
+                      <label asp-for = "IdTerritorio" class = "control-label"></label>
+
+                       <select asp-for = "IdTerritorio" class = "form-control"> 
+
+                            <option>Selecione</option>
+
+                           
+                             @foreach (var item in ViewBag.territorios)
+                             {
+
+                                      <option> @item.Id</option>
+                                      
+
+                              
+                            }
+
+                             
+
+                       </select>
+
+                          <br/>     
+
+                </div>
+
+
+                <div class = "form--group">
+
+                      <label asp-for = "Data" class = "control-label"></label>
+
+                       <input  type = "Date" asp-for = "Data" class = "form-control"/>
+
+                        <br/>     
+
+              </div>
+
+              
+                <div class = "form--group">
+
+                      <label asp-for = "Local" class = "control-label"></label>
+
+                       <input asp-for = "Local" class = "form-control"/>
+
+                          <br/>     
+
+                </div>
+
+                
+                <div class = "form--group">
+
+                      <label asp-for = "Status" class = "control-label"></label>
+
+                       <input asp-for = "Status" class = "form-control"/>
+
+                          <br/>     
+
+                </div>
+
+              
+              <div class = "form-group">
+
+                      <input type = "submit"  value = "Criar" class = "btn  btn-primary"/>
+
+              </div>
+
+              
+
+          </form>
+
+      </div>
+
+
+</div>
+
+</hr>
+<br>
+
+ 
+<a asp-action = "Index" >Voltar </a>

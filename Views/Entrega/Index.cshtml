@@ -1,0 +1,138 @@
+@model IEnumerable<Postagem.Models.Entrega>
+
+@{
+
+      ViewData["Title"] = "Listagem de Entregas";
+
+}
+
+<h2>Cartas</h2>
+
+<p><a asp-action = "Criar">Novo registro de Entrega</a></p>
+
+
+
+<table class = "table">
+
+        <thead>
+
+              <tr>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Id)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Data)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.IdCarta)
+
+                  </th>
+
+                   <th>
+
+                        @Html.DisplayNameFor(model  => model.IdTerritorio)
+
+                  </th>
+
+                   <th>
+
+                        @Html.DisplayNameFor(model  => model.Local)
+
+                  </th>
+
+                   <th>
+
+                        @Html.DisplayNameFor(model  => model.Status)
+
+                  </th>
+
+                  
+
+                  <th></th>
+
+            </tr>
+
+            
+
+        </thead>
+
+        <tbody>
+
+              @foreach (var item in Model)
+              {
+                
+                    <tr>
+
+                        <td>
+
+                                @Html.DisplayFor(model  => item.Id)
+
+                                 
+
+                         </td>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => item.Data)
+
+                                 
+
+                         </td>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => item.IdCarta)
+
+                                 
+
+                         </td>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => item.IdTerritorio)
+
+                         <td>
+
+                                 @Html.DisplayFor(model  => item.Local)   
+
+                         </td>
+
+                         <td>
+
+                                @Html.DisplayFor(model  => item.Status)
+
+                                 
+
+                         </td>
+
+                         
+                          </td>
+
+                          <td>
+
+                                <a asp-action = "Editar" asp-route-id = "@item.Id">Editar</a> |
+                                 <a asp-action = "Detalhes" asp-route-id = "@item.Id">Detalhes</a> |
+                                  <a asp-action = "Deletar" asp-route-id = "@item.Id">Deletar</a> 
+
+                          </td>
+
+                      </tr>
+
+
+              }
+
+        </tbody>
+
+</table>
+
+  
+
+  

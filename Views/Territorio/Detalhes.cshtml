@@ -1,0 +1,97 @@
+@model Postagem.Models.Territorio
+
+@{
+
+        ViewData["Title"] = "Detalhes do registro de território";
+
+
+}
+
+<h1> Detalhes </h1>
+
+
+<table class = "table">
+
+        <thead>
+
+              <tr>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Id)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Descricao)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Cidade)
+
+                  </th>
+
+                      <th>
+
+                        @Html.DisplayNameFor(model  => model.PontoReferencia)
+
+                  </th>
+
+                  
+
+                  <th></th>
+
+            </tr>
+
+            
+
+        </thead>
+
+        <tbody>
+
+            
+                      <tr>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => model .Id)
+
+                         <td>
+
+                                 @Html.DisplayFor(model  => model.Descricao)   
+
+                         </td>
+
+                           <td>
+
+                                 @Html.DisplayFor(model  => model.Cidade)   
+
+                         </td>
+
+                         <td>
+
+                                @Html.DisplayFor(model  => model.PontoReferencia)
+
+                         </td>
+
+                         <td>
+
+
+                         
+                          </td>
+
+                          
+                      </tr>
+
+
+              
+
+        </tbody>
+
+</table>
+
+<a asp-action = "Editar" asp - route-id = "@Model.Id">Editar</a> |
+<a asp-action = "Index">Voltar</a>

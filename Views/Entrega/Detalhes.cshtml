@@ -1,0 +1,122 @@
+@model Postagem.Models.Entrega
+
+@{
+
+        ViewData["Title"] = "Detalhes do registro de entregas";
+
+
+}
+
+<h1> Detalhes </h1>
+
+
+<table class = "table">
+
+        <thead>
+
+              <tr>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Id)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Data)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.IdCarta)
+
+                  </th>
+
+                   <th>
+
+                        @Html.DisplayNameFor(model  => model.IdTerritorio)
+
+                  </th>
+
+                   <th>
+
+                        @Html.DisplayNameFor(model  => model.Local)
+
+                  </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model  => model.Status)
+
+                  </th>
+
+                   
+
+                  
+
+                  <th></th>
+
+            </tr>
+
+            
+
+        </thead>
+
+        <tbody>
+
+            
+                      <tr>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => model .Id)
+
+                         <td>
+
+                                  @Html.DisplayFor(model  => model.Data)  
+
+                         </td>
+
+                         <td>
+
+                                @Html.DisplayFor(model  => model.IdCarta)
+
+                         </td>
+
+                        <td>
+
+                                @Html.DisplayFor(model  => model.IdTerritorio)
+
+                         </td>
+
+                        <td>
+
+                               @Html.DisplayFor(model  => model.Local)
+
+                         </td>
+
+                          <td>
+
+                               @Html.DisplayFor(model  => model.Status)
+
+                         </td>
+
+                        
+
+                         
+                          </td>
+
+                          
+                      </tr>
+
+
+              
+
+        </tbody>
+
+</table>
+
+<a asp-action = "Editar" asp - route-id = "@Model.Id">Editar</a> |
+<a asp-action = "Index">Voltar</a>

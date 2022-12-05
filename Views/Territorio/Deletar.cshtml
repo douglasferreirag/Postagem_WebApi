@@ -1,0 +1,96 @@
+@model Postagem.Models.Territorio
+
+@{
+
+        ViewData["Title"] = "Deletar registro de território";
+
+
+}
+
+<h1 style = "color: red;"> Deseja realmente deletar esse registro de território? Essa operação é irreversível. </h1>
+
+</hr>
+
+<table class = "table">
+
+        <thead>
+
+              <tr>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Id)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Descricao)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Cidade)
+
+                  </th>
+
+                   <th>
+
+                        @Html.DisplayNameFor(model  => model.PontoReferencia)
+
+                  </th>
+
+                  
+
+                  <th></th>
+
+            </tr>
+
+            
+
+        </thead>
+
+        <tbody>
+
+            
+                      <tr>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => model .Id)
+
+                         <td>
+
+                                 @Html.DisplayFor(model  => model.Descricao)   
+
+                         </td>
+
+                         <td>
+
+                                @Html.DisplayFor(model  => model.PontoReferencia)
+
+                         </td>
+
+                         
+                          </td>
+
+                          
+                      </tr>
+
+
+              
+
+        </tbody>
+
+</table>
+
+<form asp-action = "Deletar">
+
+    <input type = "submit" value = "Deletar" class = "btn btn-danger"/>
+
+</form>
+
+<br>
+
+<a asp-action = "Index">Voltar</a>

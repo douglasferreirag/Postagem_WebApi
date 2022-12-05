@@ -1,0 +1,82 @@
+@model Postagem.Models.Carta
+
+@{
+
+        ViewData["Title"] = "Detalhes do registro de carta";
+
+
+}
+
+<h1> Detalhes </h1>
+
+
+<table class = "table">
+
+        <thead>
+
+              <tr>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Id)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Tema)
+
+                  </th>
+
+                  <th>
+
+                        @Html.DisplayNameFor(model  => model.Base)
+
+                  </th>
+
+                  
+
+                  <th></th>
+
+            </tr>
+
+            
+
+        </thead>
+
+        <tbody>
+
+            
+                      <tr>
+
+                          <td>
+
+                                @Html.DisplayFor(model  => model .Id)
+
+                         <td>
+
+                                 @Html.DisplayFor(model  => model.Tema)   
+
+                         </td>
+
+                         <td>
+
+                                @Html.DisplayFor(model  => model.Base)
+
+                         </td>
+
+                         
+                          </td>
+
+                          
+                      </tr>
+
+
+              
+
+        </tbody>
+
+</table>
+
+<a asp-action = "Editar" asp - route-id = "@Model.Id">Editar</a> |
+<a asp-action = "Index">Voltar</a>
