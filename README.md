@@ -1,2 +1,2 @@
-# Postagem_WebApi
-Repositório com uma web API utilizando .NET, SQL Server e Entity Framework
+# WEB API de postagem de cartas.
+Foi utilizado linguagem C#, entity framework e SQL SERVER 19 (necessário ter instalado em máquina)
